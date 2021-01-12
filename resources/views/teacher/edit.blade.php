@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-md sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form action="">
+                    <form action="{{ route('teacher.update',$user) }}" method="POST" enctype="multipart/form-data">
                         <div>
                             <x-label for="name" :value="__('Name')" />
                             <x-input id="name" class="block mt-1 w-full border border-gray-400 hover:border-gray-500" type="text" value="{{ $user->name }}" name="name" required autofocus />
@@ -20,6 +20,10 @@
                         <div class="my-4">
                             <x-label for="phone" :value="__('Phone')" />
                             <x-input id="phone" class="block mt-1 w-full border border-gray-400 hover:border-gray-500" type="text" name="phone" placeholder="phone" value="{{ $user->phone }}" required autofocus />
+                        </div>
+                        <div class="my-4">
+                            <x-label for="photo" :value="__('Photo')" />
+                            <x-input id="photo" class="block mt-1 w-full border border-gray-400 hover:border-gray-500" type="file" name="photo" placeholder="phone" value="{{ $user->phone }}" required autofocus />
                         </div>
                         <div class="my-4">
                             <x-label for="address" :value="__('Address')" />

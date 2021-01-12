@@ -82,4 +82,8 @@ class User extends Authenticatable
     public function major(){
         return $this->belongsTo(Major::class, 'major_id');
     }
+
+    public function gravatar($size=150){
+        return "https://www.gravatar.com/avatar/" . $this->email . "?d=&s=" . $size;
+    }
 }
