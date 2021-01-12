@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="title">
+        Library
+    </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-center text-gray-800 leading-tight">
             Library

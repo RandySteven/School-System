@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="title">
+        Extracurriculars
+    </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-center text-gray-800 leading-tight">
             {{ __('Extracurricular') }}

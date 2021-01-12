@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="title">
+        {{ $classroom->major->major }} {{ $classroom->level->level }} - {{ $classroom->class }}
+    </x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-center text-gray-800 leading-tight">
           {{ $classroom->major->major }} {{ $classroom->level->level }} - {{ $classroom->class }}

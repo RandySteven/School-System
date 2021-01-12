@@ -1,4 +1,7 @@
 <x-app-layout>
+    <x-slot name="title">
+        {{ $material->title }}
+    </x-slot>
     <div class="flex text-blue-500 hover:text-blue-600" >
         {{ $material->material_file }}
         <a href="{{ route('download', $material->material_file) }}" download="{{ $material->material_file }}" class="ml-12">
