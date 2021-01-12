@@ -13,6 +13,8 @@
             <div class="bg-white overflow-hidden shadow-md sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <form action="{{ route('teacher.update',$user) }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        @method('PATCH')
                         <div>
                             <x-label for="name" :value="__('Name')" />
                             <x-input id="name" class="block mt-1 w-full border border-gray-400 hover:border-gray-500" type="text" value="{{ $user->name }}" name="name" required autofocus />
@@ -23,7 +25,7 @@
                         </div>
                         <div class="my-4">
                             <x-label for="photo" :value="__('Photo')" />
-                            <x-input id="photo" class="block mt-1 w-full border border-gray-400 hover:border-gray-500" type="file" name="photo" placeholder="phone" value="{{ $user->phone }}" required autofocus />
+                            <x-input id="photo" class="block mt-1 w-full border border-gray-400 hover:border-gray-500" type="file" name="photo" placeholder="phone" value="{{ $user->photo }}"  />
                         </div>
                         <div class="my-4">
                             <x-label for="address" :value="__('Address')" />
@@ -45,6 +47,7 @@
                                 @endforeach
                             </select>
                         </div>
+                        <button type="submit" class="px-2 py-1 bg-blue-500 hover:bg-blue-400">Submit</button>
                     </form>
                 </div>
             </div>
